@@ -118,6 +118,8 @@
     transition: opacity 0.3s;
   }
   nav.scrolled .nav-logo { opacity: 1; }
+
+  /* PC用ナビ */
   .nav-links {
     display: flex;
     gap: 24px;
@@ -131,6 +133,60 @@
     transition: color 0.2s;
   }
   .nav-links a:hover { color: var(--gold); }
+
+  /* ハンバーガーボタン */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 200;
+  }
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* モバイルメニュー */
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(45, 90, 61, 0.97);
+    z-index: 150;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .mobile-menu.open {
+    display: flex;
+    opacity: 1;
+  }
+  .mobile-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: color 0.2s;
+  }
+  .mobile-menu a:hover { color: var(--gold); }
+
+  @media (max-width: 640px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+  }
 
   /* =====================
      HERO
@@ -665,7 +721,20 @@
     <li><a href="#traction">実績</a></li>
     <li><a href="#team">チーム</a></li>
   </ul>
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </nav>
+
+<!-- モバイルメニュー -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#problem" onclick="closeMenu()">課題</a>
+  <a href="#solution" onclick="closeMenu()">解決策</a>
+  <a href="#traction" onclick="closeMenu()">実績</a>
+  <a href="#team" onclick="closeMenu()">チーム</a>
+</div>
 
 <!-- HERO -->
 <div class="hero">
@@ -705,7 +774,7 @@
 <div class="problem-bg" id="problem">
   <div class="problem-inner">
     <div class="section-label reveal">PROBLEM</div>
-    <h2 class="reveal">歯学部の授業、<br>実は「聞いてるだけ」に<br>なってない？</h2>
+    <h2 class="reveal">歯学部の授業、<br>実は「出席とってもらって<br>満足」になってない？</h2>
     <div class="problem-cards">
       <div class="problem-card reveal delay-1">
         <span class="emoji">😔</span>
@@ -879,6 +948,40 @@
 </footer>
 
 <script>
+  // =====================
+  // ハンバーガーメニュー
+  // =====================
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  });
+
+  function closeMenu() {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // =====================
+  // ハンバーガーメニュー
+  // =====================
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+
+  function closeMenu() {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  }
+
   // =====================
   // NAVスクロール
   // =====================
