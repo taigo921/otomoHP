@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>授業のotomo｜保護者の皆様へ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@500;700;900&display=swap">
+<style>
+  :root {
+    --bg: #FAF8F3;
+    --bg-card: #FFFFFF;
+    --bg-dark: #0E1B2C;
+    --bg-soft: #F1ECE2;
+    --ink: #14202E;
+    --ink-2: #4A5566;
+    --ink-3: #7A8595;
+    --rule: #E3DCCC;
+    --rule-dark: #1E2E44;
+    --brand: #0B3D5C;
+    --brand-2: #14587F;
+    --accent: #D97742;
+    --accent-soft: #F4E5D6;
+    --warn: #B5471F;
+    --good: #2E7A55;
+    --shadow: 0 1px 2px rgba(20,32,46,0.04), 0 8px 30px rgba(20,32,46,0.06);
+    --shadow-lg: 0 2px 4px rgba(20,32,46,0.04), 0 30px 60px rgba(20,32,46,0.10);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Yu Gothic", "メイリオ", sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    font-size: 17px;
+    line-height: 1.85;
+    letter-spacing: 0.02em;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  .serif { font-family: "Noto Serif JP", serif; font-weight: 700; letter-spacing: 0.03em; }
+  .mono { font-family: "SFMono-Regular", "Menlo", "Monaco", "Consolas", monospace; letter-spacing: 0; }
+
+  /* ====== NAV ====== */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(250, 248, 243, 0.85);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    border-bottom: 1px solid var(--rule);
+  }
+  .nav-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 10px;
+    text-decoration: none; color: var(--ink);
+  }
+  .brand-mark {
+    width: 30px; height: 30px; border-radius: 7px;
+    background: var(--brand);
+    color: #fff;
+    display: grid; place-items: center;
+    font-weight: 900; font-size: 15px;
+    font-family: "Noto Serif JP", serif;
+    letter-spacing: -0.04em;
+  }
+  .brand-name { font-weight: 700; font-size: 17px; letter-spacing: 0.05em; }
+  .brand-name .sub { color: var(--ink-3); font-weight: 500; font-size: 13px; margin-left: 8px; letter-spacing: 0.08em; }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a {
+    color: var(--ink-2);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--brand); }
+  .nav-cta {
+    background: var(--brand);
+    color: #fff !important;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 13px !important;
+    letter-spacing: 0.1em !important;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--brand-2); color: #fff !important; }
+  @media (max-width: 720px) {
+    .nav-links a:not(.nav-cta) { display: none; }
+    .nav-inner { padding: 12px 20px; }
+  }
+
+  /* ====== SECTION FRAME ====== */
+  section { padding: 120px 32px; position: relative; }
+  .container { max-width: 1100px; margin: 0 auto; }
+  .container-narrow { max-width: 820px; margin: 0 auto; }
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.4em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .eyebrow::before {
+    content: ""; width: 28px; height: 1px; background: var(--accent);
+  }
+  .h1 {
+    font-size: clamp(34px, 5.2vw, 60px);
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+    margin: 0 0 32px;
+    text-wrap: balance;
+  }
+  .h2 {
+    font-size: clamp(28px, 3.6vw, 42px);
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+    margin: 0 0 28px;
+    text-wrap: balance;
+  }
+  .h3 {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+    margin: 0 0 16px;
+  }
+  .lead {
+    font-size: 19px;
+    line-height: 2;
+    color: var(--ink-2);
+    max-width: 720px;
+  }
+  .body-text { font-size: 17px; line-height: 2; color: var(--ink-2); }
+  .body-text + .body-text { margin-top: 1.4em; }
+  .small { font-size: 13px; color: var(--ink-3); letter-spacing: 0.08em; }
+
+  /* ====== HERO ====== */
+  .hero {
+    padding: 100px 32px 130px;
+    background:
+      radial-gradient(ellipse 80% 60% at 75% 30%, rgba(217,119,66,0.06), transparent 60%),
+      radial-gradient(ellipse 60% 60% at 15% 80%, rgba(11,61,92,0.04), transparent 60%),
+      var(--bg);
+  }
+  .hero-inner { max-width: 1100px; margin: 0 auto; }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  @media (max-width: 880px) { .hero-grid { grid-template-columns: 1fr; gap: 50px; } }
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink-2);
+    margin-bottom: 32px;
+    letter-spacing: 0.05em;
+  }
+  .hero-tag-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+  .hero h1 {
+    font-family: "Noto Serif JP", serif;
+    font-size: clamp(32px, 4.8vw, 60px);
+    font-weight: 900;
+    line-height: 1.45;
+    letter-spacing: 0.04em;
+    margin: 0 0 32px;
+  }
+  .hero h1 .accent { color: var(--brand); }
+  .hero h1 .nowrap { white-space: nowrap; }
+  .hero h1 .num {
+    display: inline-block;
+    color: var(--accent);
+    font-size: 1.08em;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+  .hero-sub {
+    font-size: 18px;
+    line-height: 2.1;
+    color: var(--ink-2);
+    margin-bottom: 40px;
+  }
+  .hero-cta-row { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 28px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: none; cursor: pointer;
+  }
+  .btn-primary {
+    background: var(--brand);
+    color: #fff;
+    box-shadow: 0 1px 2px rgba(11,61,92,0.2), 0 8px 24px rgba(11,61,92,0.18);
+  }
+  .btn-primary:hover { background: var(--brand-2); transform: translateY(-1px); box-shadow: 0 2px 4px rgba(11,61,92,0.25), 0 12px 30px rgba(11,61,92,0.22); }
+  .btn-ghost {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--rule);
+  }
+  .btn-ghost:hover { border-color: var(--brand); color: var(--brand); }
+  .btn .arrow { transition: transform 0.2s; }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  .hero-visual {
+    position: relative;
+    aspect-ratio: 4/5;
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--bg-soft);
+    box-shadow: var(--shadow-lg);
+  }
+  .placeholder {
+    position: absolute; inset: 0;
+    background-image:
+      repeating-linear-gradient(135deg,
+        rgba(11,61,92,0.04) 0,
+        rgba(11,61,92,0.04) 10px,
+        transparent 10px,
+        transparent 20px);
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 32px;
+    color: var(--ink-3);
+  }
+  .placeholder-label {
+    font-family: "SFMono-Regular", monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    background: var(--bg-card);
+    padding: 8px 14px;
+    border-radius: 4px;
+    border: 1px solid var(--rule);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .placeholder-text {
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 240px;
+    color: var(--ink-2);
+  }
+
+  /* ====== STAT / NUMBER BLOCKS ====== */
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin-top: 64px;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  @media (max-width: 720px) { .stat-row { grid-template-columns: 1fr; } }
+  .stat {
+    padding: 28px 24px;
+    border-right: 1px solid var(--rule);
+  }
+  .stat:last-child { border-right: none; }
+  @media (max-width: 720px) {
+    .stat { border-right: none; border-bottom: 1px solid var(--rule); }
+    .stat:last-child { border-bottom: none; }
+  }
+  .stat-num {
+    font-family: "Noto Serif JP", serif;
+    font-size: 38px;
+    font-weight: 900;
+    color: var(--brand);
+    letter-spacing: 0;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+  .stat-num .unit { font-size: 18px; color: var(--ink-2); margin-left: 4px; font-weight: 700; }
+  .stat-label { font-size: 13px; color: var(--ink-2); letter-spacing: 0.06em; }
+
+  /* ====== PROBLEM SECTION ====== */
+  .problem {
+    background: var(--bg-dark);
+    color: #E8E2D4;
+  }
+  .problem .eyebrow { color: var(--accent); }
+  .problem .h2 { color: #fff; }
+  .problem .body-text { color: #B4BCC9; }
+
+  .problem-visual {
+    position: relative;
+    aspect-ratio: 16/9;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #1A2A3F;
+    margin: 56px 0;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+  }
+  .problem-visual .placeholder {
+    background-image:
+      repeating-linear-gradient(135deg,
+        rgba(255,255,255,0.03) 0,
+        rgba(255,255,255,0.03) 12px,
+        transparent 12px,
+        transparent 24px);
+  }
+  .problem-visual .placeholder-label {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: #B4BCC9;
+  }
+  .problem-visual .placeholder-text { color: #8A95A5; }
+
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 56px;
+  }
+  @media (max-width: 800px) { .pain-grid { grid-template-columns: 1fr; } }
+  .pain-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 32px 28px;
+  }
+  .pain-step {
+    font-family: "Noto Serif JP", serif;
+    font-size: 13px;
+    letter-spacing: 0.3em;
+    color: var(--accent);
+    margin-bottom: 16px;
+    font-weight: 700;
+  }
+  .pain-card h4 {
+    color: #fff;
+    font-size: 19px;
+    font-weight: 700;
+    margin: 0 0 14px;
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+  }
+  .pain-card p {
+    color: #98A2B0;
+    font-size: 15px;
+    line-height: 1.9;
+    margin: 0;
+  }
+  .pain-arrow {
+    text-align: center;
+    color: var(--accent);
+    font-size: 24px;
+    margin: 16px 0;
+  }
+
+  /* ====== REALITY (school is doing its best) ====== */
+  .reality {
+    background: var(--bg-soft);
+  }
+  .quote-frame {
+    max-width: 820px;
+    margin: 48px auto 0;
+    padding: 48px 56px;
+    background: var(--bg-card);
+    border-radius: 16px;
+    border-left: 4px solid var(--accent);
+    box-shadow: var(--shadow);
+    position: relative;
+  }
+  @media (max-width: 600px) { .quote-frame { padding: 36px 28px; } }
+  .quote-mark {
+    position: absolute;
+    top: 16px; left: 24px;
+    font-family: "Noto Serif JP", serif;
+    font-size: 72px;
+    color: var(--accent-soft);
+    line-height: 1;
+    z-index: 0;
+  }
+  .quote-text {
+    font-family: "Noto Serif JP", serif;
+    font-size: 22px;
+    line-height: 2.1;
+    color: var(--ink);
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+  .quote-attr {
+    margin-top: 24px;
+    font-size: 13px;
+    color: var(--ink-3);
+    letter-spacing: 0.1em;
+  }
+
+  /* ====== SOLUTION ====== */
+  .solution {
+    background: var(--bg);
+    overflow: hidden;
+  }
+  .solution-intro { margin-bottom: 80px; text-align: center; }
+  .solution-intro .eyebrow { justify-content: center; }
+  .solution-intro .eyebrow::after {
+    content: ""; width: 28px; height: 1px; background: var(--accent);
+  }
+
+  .product-shot {
+    background: var(--bg-card);
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    border: 1px solid var(--rule);
+    margin-bottom: 80px;
+  }
+  .ps-bar {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 20px;
+    background: var(--bg-soft);
+    border-bottom: 1px solid var(--rule);
+    font-size: 12px;
+    color: var(--ink-3);
+    letter-spacing: 0.1em;
+  }
+  .ps-bar-dots { display: flex; gap: 6px; }
+  .ps-bar-dots span { width: 10px; height: 10px; border-radius: 50%; background: var(--rule); }
+  .ps-bar-title { font-weight: 600; color: var(--ink-2); }
+
+  /* Mock parent dashboard */
+  .dashboard {
+    padding: 36px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    background: var(--bg);
+  }
+  @media (max-width: 800px) { .dashboard { grid-template-columns: 1fr; padding: 24px; } }
+  .dash-card {
+    background: var(--bg-card);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .dash-card-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 20px;
+  }
+  .dash-card-title { font-size: 14px; font-weight: 700; color: var(--ink-2); letter-spacing: 0.08em; }
+  .dash-card-meta { font-size: 11px; color: var(--ink-3); letter-spacing: 0.1em; }
+  .dash-live {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 11px; color: var(--good); font-weight: 700; letter-spacing: 0.15em;
+  }
+  .dash-live::before {
+    content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--good);
+    animation: pulse 1.6s ease-in-out infinite;
+  }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+  .score-big {
+    font-family: "Noto Serif JP", serif;
+    font-size: 88px;
+    font-weight: 900;
+    color: var(--brand);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .score-big .pt { font-size: 22px; color: var(--ink-2); margin-left: 6px; letter-spacing: 0; font-weight: 700; }
+  .score-bar {
+    height: 6px;
+    background: var(--rule);
+    border-radius: 99px;
+    overflow: hidden;
+    margin-top: 16px;
+  }
+  .score-bar > div {
+    height: 100%;
+    background: linear-gradient(90deg, var(--brand), var(--accent));
+    border-radius: 99px;
+  }
+  .score-context {
+    margin-top: 14px;
+    font-size: 13px;
+    color: var(--ink-2);
+    line-height: 1.7;
+  }
+  .score-context .good { color: var(--good); font-weight: 700; }
+
+  .lesson-list { display: flex; flex-direction: column; gap: 14px; }
+  .lesson-item {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px dashed var(--rule);
+    font-size: 14px;
+  }
+  .lesson-item:last-child { border-bottom: none; }
+  .lesson-info { display: flex; flex-direction: column; gap: 2px; }
+  .lesson-time { font-size: 11px; color: var(--ink-3); letter-spacing: 0.06em; font-family: monospace; }
+  .lesson-name { font-weight: 500; color: var(--ink); font-size: 14px; }
+  .lesson-score {
+    font-family: "Noto Serif JP", serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--brand);
+    letter-spacing: 0;
+  }
+  .lesson-score.mid { color: var(--accent); }
+  .lesson-score.low { color: var(--warn); }
+
+  /* feature grid */
+  .feat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  @media (max-width: 800px) { .feat-grid { grid-template-columns: 1fr; gap: 24px; } }
+  .feat {
+    padding: 36px 32px;
+    background: var(--bg-card);
+    border-radius: 14px;
+    border: 1px solid var(--rule);
+  }
+  .feat-num {
+    font-family: "Noto Serif JP", serif;
+    font-size: 14px;
+    color: var(--accent);
+    letter-spacing: 0.3em;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .feat h3 {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 0 0 14px;
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+  }
+  .feat p {
+    font-size: 15px;
+    color: var(--ink-2);
+    line-height: 1.9;
+    margin: 0;
+  }
+
+  /* ====== MESSAGE TO PARENTS ====== */
+  .message {
+    background: var(--bg-card);
+    position: relative;
+  }
+  .message::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--brand), var(--accent));
+  }
+  .message-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 80px;
+    align-items: start;
+  }
+  @media (max-width: 880px) { .message-grid { grid-template-columns: 1fr; gap: 40px; } }
+  .message-side {
+    position: sticky;
+    top: 100px;
+  }
+  @media (max-width: 880px) { .message-side { position: static; } }
+  .vow {
+    background: var(--bg-soft);
+    padding: 36px 32px;
+    border-radius: 12px;
+    margin-bottom: 28px;
+  }
+  .vow-label {
+    font-size: 12px;
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    margin-bottom: 16px;
+  }
+  .vow-text {
+    font-family: "Noto Serif JP", serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.8;
+    margin: 0;
+    letter-spacing: 0.04em;
+  }
+  .vow-text .strike {
+    text-decoration: line-through;
+    text-decoration-color: var(--warn);
+    text-decoration-thickness: 3px;
+    color: var(--ink-3);
+  }
+  .vow-text .keep { color: var(--brand); }
+
+  .msg-block { margin-bottom: 48px; }
+  .msg-block:last-child { margin-bottom: 0; }
+  .msg-block h3 {
+    font-family: "Noto Serif JP", serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.6;
+    margin: 0 0 20px;
+    letter-spacing: 0.05em;
+    color: var(--ink);
+  }
+  .msg-block p {
+    font-size: 16.5px;
+    line-height: 2.1;
+    color: var(--ink-2);
+    margin: 0 0 1.2em;
+  }
+  .msg-highlight {
+    background: linear-gradient(transparent 60%, var(--accent-soft) 60%);
+    padding: 0 2px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .channels {
+    display: flex; gap: 16px; margin-top: 28px; flex-wrap: wrap;
+  }
+  .channel {
+    padding: 12px 20px;
+    background: var(--bg-soft);
+    border-radius: 99px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink-2);
+    display: inline-flex; align-items: center; gap: 8px;
+    letter-spacing: 0.05em;
+  }
+  .channel-icon { width: 18px; height: 18px; }
+
+  /* ====== CLOSING CTA ====== */
+  .closing {
+    background:
+      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(217,119,66,0.18), transparent 60%),
+      var(--bg-dark);
+    color: #fff;
+    text-align: center;
+    padding: 140px 32px 120px;
+  }
+  .closing .eyebrow { color: var(--accent); justify-content: center; }
+  .closing .eyebrow::after {
+    content: ""; width: 28px; height: 1px; background: var(--accent);
+  }
+  .closing h2 {
+    font-family: "Noto Serif JP", serif;
+    color: #fff;
+    font-size: clamp(34px, 5vw, 56px);
+    font-weight: 900;
+    line-height: 1.55;
+    letter-spacing: 0.06em;
+    margin: 0 0 32px;
+  }
+  .closing h2 .accent { color: var(--accent); }
+  .closing p {
+    color: #B4BCC9;
+    font-size: 17px;
+    line-height: 2;
+    max-width: 640px;
+    margin: 0 auto 56px;
+  }
+  .closing .btn-primary {
+    background: var(--accent);
+    box-shadow: 0 1px 2px rgba(217,119,66,0.3), 0 12px 30px rgba(217,119,66,0.25);
+  }
+  .closing .btn-primary:hover { background: #c46330; }
+  .closing-meta {
+    margin-top: 56px;
+    font-size: 13px;
+    color: #7A8595;
+    letter-spacing: 0.15em;
+  }
+
+  /* ====== FOOTER ====== */
+  footer {
+    background: var(--bg-dark);
+    color: #8A95A5;
+    padding: 48px 32px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .footer-brand { display: flex; align-items: center; gap: 12px; color: #E8E2D4; font-weight: 700; letter-spacing: 0.06em; }
+  .footer-links { display: flex; gap: 24px; font-size: 13px; letter-spacing: 0.08em; }
+  .footer-links a { color: #8A95A5; text-decoration: none; }
+  .footer-links a:hover { color: #fff; }
+  .footer-copyright { font-size: 12px; color: #5A6573; letter-spacing: 0.1em; }
+
+  /* ====== misc ====== */
+  .em { color: var(--ink); font-weight: 700; }
+  .accent-text { color: var(--accent); font-weight: 700; }
+  .brand-text { color: var(--brand); font-weight: 700; }
+  .underline {
+    background: linear-gradient(transparent 60%, var(--accent-soft) 60%);
+    padding: 0 2px;
+  }
+
+  /* divider */
+  .divider {
+    width: 60px; height: 2px; background: var(--accent);
+    margin: 32px 0;
+  }
+</style>
+</head>
+<body>
+
+<!-- ====== NAV ====== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="brand">
+      <div class="brand-mark">乙</div>
+      <div class="brand-name">授業のotomo<span class="sub">保護者の皆様へ</span></div>
+    </a>
+    <div class="nav-links">
+      <a href="#problem">課題</a>
+      <a href="#solution">解決策</a>
+      <a href="#parents">保護者の皆様へ</a>
+      <a href="#cta" class="nav-cta">資料を請求する</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ====== HERO ====== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-tag">
+          <span class="hero-tag-dot"></span>
+          保護者の皆様へのご案内
+        </div>
+        <h1>
+          <span class="nowrap">年間 <span class="num">500万円</span></span><br>
+          その投資の<span class="accent">先</span>を、<br>
+          ご存知ですか。
+        </h1>
+        <p class="hero-sub">
+          せっかくお子様を毎年500万円近くかけて、この学校に入れていらっしゃる。<br>
+          ——その授業時間、実際にはどうなっているか。<br>
+          そして、定期試験の結果を見て「もう手遅れ」と気づく前に、<br>
+          できることがあります。
+        </p>
+        <div class="hero-cta-row">
+          <a href="#problem" class="btn btn-primary">
+            お話を聞く <span class="arrow">→</span>
+          </a>
+          <a href="#cta" class="btn btn-ghost">
+            資料を請求する
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="placeholder">
+          <div class="placeholder-label">image / hero</div>
+          <div class="placeholder-text">
+            実際の授業風景<br>
+            （集中している学生／そうでない学生が混在する教室の写真）
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat">
+        <div class="stat-num">約500<span class="unit">万円/年</span></div>
+        <div class="stat-label">ご家庭の教育投資</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">90<span class="unit">分 × 4コマ</span></div>
+        <div class="stat-label">お子様の毎日の授業</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">6<span class="unit">年</span></div>
+        <div class="stat-label">CBT・国試までの積み重ね</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== PROBLEM ====== -->
+<section class="problem" id="problem">
+  <div class="container">
+    <div class="eyebrow">課題</div>
+    <h2 class="h2">授業中の取り組みは、<br>ご家庭からも、学校からも<br>「ブラックボックス」です。</h2>
+    <p class="body-text">
+      お子様が授業中、本当に集中して受けているのか。<br>
+      ノートを取っているのか、それとも——
+    </p>
+
+    <div class="problem-visual">
+      <div class="placeholder">
+        <div class="placeholder-label">image / classroom reality</div>
+        <div class="placeholder-text">
+          授業中の教室風景<br>
+          （机に伏せて寝ている学生、スマホを触る学生など、<br>"現実"が分かるイメージ）
+        </div>
+      </div>
+    </div>
+
+    <p class="body-text">
+      ——そして、その結果がはじめて見えるのは、<span class="em" style="color:#fff;">定期試験の点数</span>として返ってきた時。<br>
+      そのときには、もう手遅れになっていることも、少なくありません。
+    </p>
+
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="pain-step">STEP 01</div>
+        <h4>授業時間が<br>ブラックボックス</h4>
+        <p>日々90分×4コマ、合計年間1,000時間以上。その中身が、ご家庭からは全く見えません。</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-step">STEP 02</div>
+        <h4>気づくのは<br>テスト返却時</h4>
+        <p>「頑張っていたかどうか」が分かるのは、点数として返ってきた瞬間。そこから挽回するには、時間が足りない。</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-step">STEP 03</div>
+        <h4>積み重ねが<br>CBT・国試に響く</h4>
+        <p>日々の授業の小さな差が、6年間積み重なり、CBT・国家試験の合否を分けていきます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== REALITY ====== -->
+<section class="reality">
+  <div class="container-narrow">
+    <div class="eyebrow">前提</div>
+    <h2 class="h2">学校の授業は、<br>本当に「一流」です。</h2>
+    <p class="body-text">
+      最高のクォリティの授業を、どの先生も、どのコマでも、提供してくださっています。
+      授業でしか勉強してこなかった私自身が言うのですから、間違いありません。<br><br>
+      ——ただ、寝ている学生・ゲームをしている学生を起こして回るのは、現実的に難しい。<br>
+      それに加えて、モチベーションの低い学生を一人ひとり起こしていくのは、<br>
+      正直、学校側にも酷だと、私は思います。
+    </p>
+
+    <div class="quote-frame">
+      <div class="quote-mark">"</div>
+      <p class="quote-text">
+        「一流の授業」と「学生のモチベーション維持」は、<br>
+        本来、別のレイヤーで支えるべき課題です。
+      </p>
+      <div class="quote-attr">— 授業のotomo の出発点</div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SOLUTION ====== -->
+<section class="solution" id="solution">
+  <div class="container">
+    <div class="solution-intro">
+      <div class="eyebrow">解決策</div>
+      <h2 class="h2">そこで、このツールです。</h2>
+      <p class="lead" style="margin: 0 auto;">
+        <span class="brand-text">今日、今、リアルタイムで</span>、<br>
+        お子様が授業にどれだけ集中しているかをスコアリング。<br>
+        授業と連動した問題配信によって、客観的に可視化します。
+      </p>
+    </div>
+
+    <!-- Product dashboard mock -->
+    <div class="product-shot">
+      <div class="ps-bar">
+        <div class="ps-bar-dots"><span></span><span></span><span></span></div>
+        <div class="ps-bar-title">保護者画面 — 田中 太郎さん</div>
+        <div class="dash-live">LIVE</div>
+      </div>
+      <div class="dashboard">
+        <div class="dash-card">
+          <div class="dash-card-head">
+            <div class="dash-card-title">今、受けている授業</div>
+            <div class="dash-card-meta">10:35 - 12:05 / 歯科理工学II</div>
+          </div>
+          <div class="score-big">87<span class="pt">点</span></div>
+          <div class="score-bar"><div style="width:87%"></div></div>
+          <div class="score-context">
+            <span class="good">▲ +12点</span> &nbsp;先週同コマ平均より高く、集中して受講中です。
+          </div>
+          <div style="margin-top: 24px; padding-top: 20px; border-top: 1px dashed var(--rule); font-size: 13px; color: var(--ink-2); line-height: 1.8;">
+            連動問題への正答率：<span class="brand-text">8/9問</span><br>
+            前回の小テストより伸びています。
+          </div>
+        </div>
+
+        <div class="dash-card">
+          <div class="dash-card-head">
+            <div class="dash-card-title">今日の授業（4コマ）</div>
+            <div class="dash-card-meta">2026.05.28</div>
+          </div>
+          <div class="lesson-list">
+            <div class="lesson-item">
+              <div class="lesson-info">
+                <div class="lesson-time">08:50 — 10:20</div>
+                <div class="lesson-name">口腔解剖学</div>
+              </div>
+              <div class="lesson-score">82</div>
+            </div>
+            <div class="lesson-item">
+              <div class="lesson-info">
+                <div class="lesson-time">10:35 — 12:05</div>
+                <div class="lesson-name">歯科理工学II <span style="color: var(--good); font-size: 11px; margin-left: 6px;">● 受講中</span></div>
+              </div>
+              <div class="lesson-score">87</div>
+            </div>
+            <div class="lesson-item">
+              <div class="lesson-info">
+                <div class="lesson-time">13:00 — 14:30</div>
+                <div class="lesson-name">薬理学</div>
+              </div>
+              <div class="lesson-score" style="color: var(--ink-3); font-size: 14px; font-weight: 500;">予定</div>
+            </div>
+            <div class="lesson-item">
+              <div class="lesson-info">
+                <div class="lesson-time">14:45 — 16:15</div>
+                <div class="lesson-name">微生物学</div>
+              </div>
+              <div class="lesson-score" style="color: var(--ink-3); font-size: 14px; font-weight: 500;">予定</div>
+            </div>
+          </div>
+          <div style="margin-top: 24px; padding-top: 20px; border-top: 1px dashed var(--rule); font-size: 13px; color: var(--ink-2); line-height: 1.8;">
+            本日の平均：<span class="brand-text">84.5点</span> / 過去7日平均より +6点
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- features -->
+    <div class="feat-grid">
+      <div class="feat">
+        <div class="feat-num">01</div>
+        <h3>授業と連動した<br>リアルタイム問題配信</h3>
+        <p>授業中の重要ポイントに合わせて、その場で問題を配信。「聞いていたか」が客観的に分かります。</p>
+      </div>
+      <div class="feat">
+        <div class="feat-num">02</div>
+        <h3>授業ごとの<br>集中度スコア</h3>
+        <p>1コマごとに集中度を数値化。今日の調子、今週の傾向まで、ひと目で把握できます。</p>
+      </div>
+      <div class="feat">
+        <div class="feat-num">03</div>
+        <h3>保護者専用<br>ダッシュボード</h3>
+        <p>お子様の今日の頑張りが、ご家庭からスマートフォンで確認可能。LINE通知にも対応予定です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== MESSAGE TO PARENTS ====== -->
+<section class="message" id="parents">
+  <div class="container">
+    <div class="message-grid">
+      <div class="message-side">
+        <div class="eyebrow">大切なお願い</div>
+        <h2 class="h2" style="font-size: clamp(26px, 3.2vw, 38px);">監視ではなく、<br>応援のために。</h2>
+
+        <div class="vow">
+          <div class="vow-label">USE / NOT USE</div>
+          <p class="vow-text">
+            <span class="strike">監視ツール</span><br>
+            <span class="keep">→ 応援のきっかけ</span>
+          </p>
+        </div>
+
+        <p class="small" style="line-height: 1.9; letter-spacing: 0.05em;">
+          このツールは、お子様を見張るためのものではありません。<br>
+          毎日90分×4コマを、初めて触れる膨大な医学的内容と向き合うお子様への、<br>
+          <span class="brand-text">ポジティブなコミュニケーションのきっかけ</span>として、お使いください。
+        </p>
+      </div>
+
+      <div>
+        <div class="msg-block">
+          <h3>一人で頑張り続けることは、<br>大人が思うよりずっと難しい。</h3>
+          <p>
+            このツールを試験運用していて気づいたことがあります。<br>
+            <span class="msg-highlight">1人で集中し続けるには、凄まじく強い意志が必要</span>で、それは多くの方にとって、とても難しいということです。
+          </p>
+          <p>
+            毎日4コマ、初めての医学知識を浴び続ける。<br>
+            ——大人でも、相当きつい状況です。
+          </p>
+        </div>
+
+        <div class="msg-block">
+          <h3>どうか、いいところを<br>見つけてあげてください。</h3>
+          <p>
+            ぜひ、保護者画面で<span class="em">「今の授業」「今日の授業集中度スコア」</span>を見て、
+            お子様の良いところを見つけて、ポジティブな声かけをしてあげてください。
+          </p>
+          <p>
+            夕食の時間でも構いません。<br>
+            最悪、LINEでも構いません。
+          </p>
+          <div class="channels">
+            <div class="channel">🍚 夕食の時間に</div>
+            <div class="channel">💬 LINEで一言</div>
+            <div class="channel">📞 電話で5分</div>
+          </div>
+        </div>
+
+        <div class="msg-block">
+          <h3>軌道に乗るまでは、<br>"喝"を入れたくなる日もあるはずです。</h3>
+          <p>
+            軌道に乗るまでは、どうしてもネガティブな部分ばかり見えて、
+            喝を入れてしまうことも多いかもしれません。
+          </p>
+          <p>
+            それでも——<br>
+            <span class="msg-highlight">授業に集中することが習慣化し、波に乗ってしまえば、</span>
+            お子様はきっと、素敵な成績を納めてきてくださるでしょう。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CLOSING ====== -->
+<section class="closing" id="cta">
+  <div class="container-narrow">
+    <div class="eyebrow">そして、最後に</div>
+    <h2>
+      授業のotomo とともに、<br>
+      お子様を、<span class="accent">一流の授業</span>という<br>
+      "いい波"に乗せましょう。
+    </h2>
+    <p>
+      お子様の毎日の90分×4コマを、点数で振り返るだけのものから、<br>
+      ご家庭との対話のきっかけに変えていく。<br>
+      私たちはそのお手伝いをします。
+    </p>
+    <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+      <a href="#" class="btn btn-primary">
+        保護者向け資料を請求する <span class="arrow">→</span>
+      </a>
+      <a href="#" class="btn btn-ghost" style="color:#fff; border-color: rgba(255,255,255,0.2);">
+        個別説明会のご予約
+      </a>
+    </div>
+    <div class="closing-meta">
+      導入校・実績については <a href="#" style="color:#B4BCC9; text-decoration: underline;">こちら</a> よりご確認いただけます。
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="brand-mark" style="background: rgba(255,255,255,0.1); color:#E8E2D4;">乙</div>
+      授業のotomo
+    </div>
+    <div class="footer-links">
+      <a href="#">トップ</a>
+      <a href="#problem">課題</a>
+      <a href="#solution">解決策</a>
+      <a href="#parents">保護者の皆様へ</a>
+      <a href="#cta">お問い合わせ</a>
+    </div>
+    <div class="footer-copyright">© 2026 授業のotomo</div>
+  </div>
+</footer>
+
+<script>
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      const target = document.querySelector(targetId);
+      if (target) {
+        e.preventDefault();
+        const navHeight = document.querySelector('.nav').offsetHeight;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Simulate live score "flicker" on dashboard
+  (function() {
+    const big = document.querySelector('.score-big');
+    if (!big) return;
+    let current = 87;
+    setInterval(() => {
+      const drift = Math.round((Math.random() - 0.5) * 4);
+      const next = Math.max(78, Math.min(95, current + drift));
+      current = next;
+      big.firstChild.textContent = next;
+      const bar = document.querySelector('.score-bar > div');
+      if (bar) bar.style.width = next + '%';
+    }, 3000);
+  })();
+</script>
+
+</body>
+</html>
