@@ -674,7 +674,7 @@
     position: relative;
   }
   .cta-bg p {
-    color: rgba(255,255,255,0.75);
+    color: rgba(255,255,255,0.75) !important;
     max-width: 480px;
     margin: 0 auto;
     position: relative;
@@ -720,9 +720,7 @@
   /* ダークモード完全無効 */
   :root { color-scheme: light only; }
   
-  @media (prefers-color-scheme: dark) {
-    /* ベージュ背景エリア */
-    body { color: #1A1A1A !important; background: #F5F0E8 !important; color: #1A1A1A !important; }
+  
     section { background: #F5F0E8 !important; }
     h2 { color: #1A1A1A !important; color: #1A1A1A !important; }
     p { color: #333333 !important; }
@@ -976,340 +974,10 @@
   </div>
 </section>
 
-
-
-
-      <div class="hero-visual">
-        <div class="placeholder">
-          <div class="placeholder-label">image / hero</div>
-          <div class="placeholder-text">
-            実際の授業風景<br>
-            （集中している学生／そうでない学生が混在する教室の写真）
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="stat-row">
-      <div class="stat">
-        <div class="stat-num">約500<span class="unit">万円/年</span></div>
-        <div class="stat-label">ご家庭の教育投資</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">90<span class="unit">分 × 4コマ</span></div>
-        <div class="stat-label">お子様の毎日の授業</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">6<span class="unit">年</span></div>
-        <div class="stat-label">CBT・国試までの積み重ね</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ====== PROBLEM ====== -->
-<section class="problem" id="problem">
-  <div class="container">
-    <div class="eyebrow">課題</div>
-    <h2 class="h2">授業中の取り組みは、<br>ご家庭からも、学校からも<br>「ブラックボックス」です。</h2>
-    <p class="body-text">
-      お子様が授業中、本当に集中して受けているのか。<br>
-      ノートを取っているのか、それとも——
-    </p>
-
-    <div class="problem-visual">
-      <div class="placeholder">
-        <div class="placeholder-label">image / classroom reality</div>
-        <div class="placeholder-text">
-          授業中の教室風景<br>
-          （机に伏せて寝ている学生、スマホを触る学生など、<br>"現実"が分かるイメージ）
-        </div>
-      </div>
-    </div>
-
-    <p class="body-text">
-      ——そして、その結果がはじめて見えるのは、<span class="em" style="color:#fff;">定期試験の点数</span>として返ってきた時。<br>
-      そのときには、もう手遅れになっていることも、少なくありません。
-    </p>
-
-    <div class="pain-grid">
-      <div class="pain-card">
-        <div class="pain-step">STEP 01</div>
-        <h4>授業時間が<br>ブラックボックス</h4>
-        <p>日々90分×4コマ、合計年間1,000時間以上。その中身が、ご家庭からは全く見えません。</p>
-      </div>
-      <div class="pain-card">
-        <div class="pain-step">STEP 02</div>
-        <h4>気づくのは<br>テスト返却時</h4>
-        <p>「頑張っていたかどうか」が分かるのは、点数として返ってきた瞬間。そこから挽回するには、時間が足りない。</p>
-      </div>
-      <div class="pain-card">
-        <div class="pain-step">STEP 03</div>
-        <h4>積み重ねが<br>CBT・国試に響く</h4>
-        <p>日々の授業の小さな差が、6年間積み重なり、CBT・国家試験の合否を分けていきます。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ====== REALITY ====== -->
-<section class="reality">
-  <div class="container-narrow">
-    <div class="eyebrow">前提</div>
-    <h2 class="h2">学校の授業は、<br>本当に「一流」です。</h2>
-    <p class="body-text">
-      最高のクォリティの授業を、どの先生も、どのコマでも、提供してくださっています。
-      授業でしか勉強してこなかった私自身が言うのですから、間違いありません。<br><br>
-      ——ただ、寝ている学生・ゲームをしている学生を起こして回るのは、現実的に難しい。<br>
-      それに加えて、モチベーションの低い学生を一人ひとり起こしていくのは、<br>
-      正直、学校側にも酷だと、私は思います。
-    </p>
-
-    <div class="quote-frame">
-      <div class="quote-mark">"</div>
-      <p class="quote-text">
-        「一流の授業」と「学生のモチベーション維持」は、<br>
-        本来、別のレイヤーで支えるべき課題です。
-      </p>
-      <div class="quote-attr">— 授業のotomo の出発点</div>
-    </div>
-  </div>
-</section>
-
-<!-- ====== SOLUTION ====== -->
-<section class="solution" id="solution">
-  <div class="container">
-    <div class="solution-intro">
-      <div class="eyebrow">解決策</div>
-      <h2 class="h2">そこで、このツールです。</h2>
-      <p class="lead" style="margin: 0 auto;">
-        <span class="brand-text">今日、今、リアルタイムで</span>、<br>
-        お子様が授業にどれだけ集中しているかをスコアリング。<br>
-        授業と連動した問題配信によって、客観的に可視化します。
-      </p>
-    </div>
-
-    <!-- Product dashboard mock -->
-    <div class="product-shot">
-      <div class="ps-bar">
-        <div class="ps-bar-dots"><span></span><span></span><span></span></div>
-        <div class="ps-bar-title">保護者画面 — 田中 太郎さん</div>
-        <div class="dash-live">LIVE</div>
-      </div>
-      <div class="dashboard">
-        <div class="dash-card">
-          <div class="dash-card-head">
-            <div class="dash-card-title">今、受けている授業</div>
-            <div class="dash-card-meta">10:35 - 12:05 / 歯科理工学II</div>
-          </div>
-          <div class="score-big">87<span class="pt">点</span></div>
-          <div class="score-bar"><div style="width:87%"></div></div>
-          <div class="score-context">
-            <span class="good">▲ +12点</span> &nbsp;先週同コマ平均より高く、集中して受講中です。
-          </div>
-          <div style="margin-top: 24px; padding-top: 20px; border-top: 1px dashed var(--rule); font-size: 13px; color: var(--ink-2); line-height: 1.8;">
-            連動問題への正答率：<span class="brand-text">8/9問</span><br>
-            前回の小テストより伸びています。
-          </div>
-        </div>
-
-        <div class="dash-card">
-          <div class="dash-card-head">
-            <div class="dash-card-title">今日の授業（4コマ）</div>
-            <div class="dash-card-meta">2026.05.28</div>
-          </div>
-          <div class="lesson-list">
-            <div class="lesson-item">
-              <div class="lesson-info">
-                <div class="lesson-time">08:50 — 10:20</div>
-                <div class="lesson-name">口腔解剖学</div>
-              </div>
-              <div class="lesson-score">82</div>
-            </div>
-            <div class="lesson-item">
-              <div class="lesson-info">
-                <div class="lesson-time">10:35 — 12:05</div>
-                <div class="lesson-name">歯科理工学II <span style="color: var(--good); font-size: 11px; margin-left: 6px;">● 受講中</span></div>
-              </div>
-              <div class="lesson-score">87</div>
-            </div>
-            <div class="lesson-item">
-              <div class="lesson-info">
-                <div class="lesson-time">13:00 — 14:30</div>
-                <div class="lesson-name">薬理学</div>
-              </div>
-              <div class="lesson-score" style="color: var(--ink-3); font-size: 14px; font-weight: 500;">予定</div>
-            </div>
-            <div class="lesson-item">
-              <div class="lesson-info">
-                <div class="lesson-time">14:45 — 16:15</div>
-                <div class="lesson-name">微生物学</div>
-              </div>
-              <div class="lesson-score" style="color: var(--ink-3); font-size: 14px; font-weight: 500;">予定</div>
-            </div>
-          </div>
-          <div style="margin-top: 24px; padding-top: 20px; border-top: 1px dashed var(--rule); font-size: 13px; color: var(--ink-2); line-height: 1.8;">
-            本日の平均：<span class="brand-text">84.5点</span> / 過去7日平均より +6点
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- features -->
-    <div class="feat-grid">
-      <div class="feat">
-        <div class="feat-num">01</div>
-        <h3>授業と連動した<br>リアルタイム問題配信</h3>
-        <p>授業中の重要ポイントに合わせて、その場で問題を配信。「聞いていたか」が客観的に分かります。</p>
-      </div>
-      <div class="feat">
-        <div class="feat-num">02</div>
-        <h3>授業ごとの<br>集中度スコア</h3>
-        <p>1コマごとに集中度を数値化。今日の調子、今週の傾向まで、ひと目で把握できます。</p>
-      </div>
-      <div class="feat">
-        <div class="feat-num">03</div>
-        <h3>保護者専用<br>ダッシュボード</h3>
-        <p>お子様の今日の頑張りが、ご家庭からスマートフォンで確認可能。LINE通知にも対応予定です。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ====== MESSAGE TO PARENTS ====== -->
-<section class="message" id="parents">
-  <div class="container">
-    <div class="message-grid">
-      <div class="message-side">
-        <div class="eyebrow">大切なお願い</div>
-        <h2 class="h2" style="font-size: clamp(26px, 3.2vw, 38px);">監視ではなく、<br>応援のために。</h2>
-
-        <div class="vow">
-          <div class="vow-label">USE / NOT USE</div>
-          <p class="vow-text">
-            <span class="strike">監視ツール</span><br>
-            <span class="keep">→ 応援のきっかけ</span>
-          </p>
-        </div>
-
-        <p class="small" style="line-height: 1.9; letter-spacing: 0.05em;">
-          このツールは、お子様を見張るためのものではありません。<br>
-          毎日90分×4コマを、初めて触れる膨大な医学的内容と向き合うお子様への、<br>
-          <span class="brand-text">ポジティブなコミュニケーションのきっかけ</span>として、お使いください。
-        </p>
-      </div>
-
-      <div>
-        <div class="msg-block">
-          <h3>一人で頑張り続けることは、<br>大人が思うよりずっと難しい。</h3>
-          <p>
-            このツールを試験運用していて気づいたことがあります。<br>
-            <span class="msg-highlight">1人で集中し続けるには、凄まじく強い意志が必要</span>で、それは多くの方にとって、とても難しいということです。
-          </p>
-          <p>
-            毎日4コマ、初めての医学知識を浴び続ける。<br>
-            ——大人でも、相当きつい状況です。
-          </p>
-        </div>
-
-        <div class="msg-block">
-          <h3>どうか、いいところを<br>見つけてあげてください。</h3>
-          <p>
-            ぜひ、保護者画面で<span class="em">「今の授業」「今日の授業集中度スコア」</span>を見て、
-            お子様の良いところを見つけて、ポジティブな声かけをしてあげてください。
-          </p>
-          <p>
-            夕食の時間でも構いません。<br>
-            最悪、LINEでも構いません。
-          </p>
-          <div class="channels">
-            <div class="channel">🍚 夕食の時間に</div>
-            <div class="channel">💬 LINEで一言</div>
-            <div class="channel">📞 電話で5分</div>
-          </div>
-        </div>
-
-        <div class="msg-block">
-          <h3>軌道に乗るまでは、<br>"喝"を入れたくなる日もあるはずです。</h3>
-          <p>
-            軌道に乗るまでは、どうしてもネガティブな部分ばかり見えて、
-            喝を入れてしまうことも多いかもしれません。
-          </p>
-          <p>
-            それでも——<br>
-            <span class="msg-highlight">授業に集中することが習慣化し、波に乗ってしまえば、</span>
-            お子様はきっと、素敵な成績を納めてきてくださるでしょう。
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ====== CLOSING ====== -->
-<section class="closing" id="cta">
-  <div class="container-narrow">
-    <div class="eyebrow">そして、最後に</div>
-    <h2>
-      授業のotomo とともに、<br>
-      お子様を、<span class="accent">一流の授業</span>という<br>
-      "いい波"に乗せましょう。
-    </h2>
-    <p>
-      お子様の毎日の90分×4コマを、点数で振り返るだけのものから、<br>
-      ご家庭との対話のきっかけに変えていく。<br>
-      私たちはそのお手伝いをします。
-    </p>
-    <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
-      <a href="#" class="btn btn-primary">
-        保護者向け資料を請求する <span class="arrow">→</span>
-      </a>
-      <a href="#" class="btn btn-ghost" style="color:#fff; border-color: rgba(255,255,255,0.2);">
-        個別説明会のご予約
-      </a>
-    </div>
-    <div class="closing-meta">
-      導入校・実績については <a href="#" style="color:#B4BCC9; text-decoration: underline;">こちら</a> よりご確認いただけます。
-    </div>
-  </div>
-</section>
-
-
-</div>
-
-
-<div class="divider"></div>
-
-<!-- SPONSOR -->
-<section id="sponsor">
-  <div class="section-label reveal">FOR SPONSORS</div>
-  <h2 class="reveal">企業・医院の方へ</h2>
-  <p class="reveal">授業のOtomoは、歯科医院・歯科関連企業・塾など、歯学部生にリーチしたい企業・団体のスポンサーを募集しています。</p>
-
-  <div class="problem-cards" style="margin-top:24px;">
-    <div class="problem-card reveal delay-1" style="border-left-color:#3A3A3A;">
-      <span class="emoji">📢</span>
-      <strong>歯学部生へのダイレクトリーチ</strong><br>
-      授業中に毎日使うサービスへの広告掲載で、歯科医師を目指す学生に直接アプローチできます。歯科メーカー・歯科医院・塾など歯科関連企業に最適です。
-    </div>
-    <div class="problem-card reveal delay-2" style="border-left-color:#3A3A3A;">
-      <span class="emoji">📋</span>
-      <strong>柔軟な掲載プラン</strong><br>
-      掲載期間・掲載形式はご要望に応じて対応します。まずはお気軽にお問い合わせください。
-    </div>
-    <div class="problem-card reveal delay-3" style="border-left-color:#3A3A3A;">
-      <span class="emoji">📩</span>
-      <strong>お問い合わせ</strong><br>
-      スポンサーに関するご相談は下記よりお気軽にご連絡ください。<br>
-      <a href="mailto:otomodentist@gmail.com" style="color:var(--green);font-weight:700;">otomodentist@gmail.com</a>
-    </div>
-  </div>
-</section>
-
 <!-- CTA -->
 <div class="cta-bg">
-  <h2 class="reveal">歯学部の授業を、<br>一緒に変えよう。</h2>
-  <p class="reveal delay-1">授業のOtomoは、歯科医師を目指す学生の授業を変えます。</p>
+  <h2 class="reveal" style="color:white;">歯学部の授業を、<br>一緒に変えよう。</h2>
+  <p class="reveal delay-1" style="color:rgba(255,255,255,0.8);">授業のOtomoは、歯科医師を目指す学生の授業を変えます。</p>
 </div>
 
 <!-- FOOTER -->
@@ -1318,36 +986,20 @@
 </footer>
 
 <script>
-
-  // =====================
-  // ハンバーガーメニュー
-  // =====================
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
-
   hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('open');
     mobileMenu.classList.toggle('open');
-    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
   });
-
   function closeMenu() {
     hamburger.classList.remove('open');
     mobileMenu.classList.remove('open');
-    document.body.style.overflow = '';
   }
-
-  // =====================
-  // NAVスクロール
-  // =====================
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
     navbar.classList.toggle('scrolled', window.scrollY > 60);
   });
-
-  // =====================
-  // スクロール アニメーション
-  // =====================
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -1357,14 +1009,9 @@
       }
     });
   }, { threshold: 0.15 });
-
   document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
     observer.observe(el);
   });
-
-  // =====================
-  // カウントアップ
-  // =====================
   const countObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -1385,11 +1032,9 @@
       }
     });
   }, { threshold: 0.5 });
-
   document.querySelectorAll('.count-up').forEach(el => {
     countObserver.observe(el);
   });
-
 </script>
 </body>
 </html>
